@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AITech Educación | IA y Programación para el Futuro</title>
+    <meta name="description"
+        content="Cursos de Inteligencia Artificial y programación para educadores y niños. Formando la próxima generación tecnológica.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navegación -->
+    <nav>
+        <div class="container nav-content">
+            <div class="logo-container">
+                <img src="logoaitech educacion.webp" alt="AITech Logo" id="main-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#" class="btn btn-primary" style="padding: 8px 20px;">Inscribirse</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <p class="futuristic-text" style="color: var(--primary); margin-bottom: 10px;">Educación 4.0</p>
+                <h1>Transforma el Futuro con <span style="color: var(--secondary);">IA</span></h1>
+                <p>Cursos especializados en Inteligencia Artificial y herramientas de programación diseñados para
+                    educadores que inspiran a las nuevas generaciones.</p>
+                <div class="hero-btns">
+                    <a href="#cursos" class="btn btn-primary">Ver Catálogo</a>
+                    <a href="#contacto" class="btn"
+                        style="color: white; border: 1px solid var(--glass-border); margin-left: 15px;">Saber Más</a>
+                </div>
+            </div>
+            <div class="character-container">
+                <img src="Logo de pie.png" alt="AITech Mascot" id="hero-character">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Videos Destacados -->
+    <section class="video-section">
+        <div class="container">
+            <div class="video-grid">
+                <!-- Video de Presentación -->
+                <div class="video-box">
+                    <span class="video-label">PRESENTACIÓN</span>
+                    <video id="video-presentation" controls poster="logoempresa.png">
+                        <source src="video presentacion AITech.mp4" type="video/mp4">
+                        Tu navegador no soporta videos.
+                    </video>
+                    <div style="padding-top: 15px;">
+                        <h3 style="color: var(--primary);">Conoce AITech Educación</h3>
+                        <p style="font-size: 0.9rem; color: #aaa;">Nuestra misión es transformar la educación con IA.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Video de Curso Nuevo -->
+                <div class="video-box">
+                    <span class="video-label" style="background: var(--secondary);">NUEVO CURSO</span>
+                    <video id="video-new-course" controls poster="logoempresa.png">
+                        <source src="video3.mp4" type="video/mp4">
+                        Tu navegador no soporta videos.
+                    </video>
+                    <div style="padding-top: 15px;">
+                        <h3 style="color: var(--secondary);">¡Gran Lanzamiento!</h3>
+                        <p style="font-size: 0.9rem; color: #aaa;">Descubre lo último en herramientas para educadores.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Cursos -->
+    <section class="courses-section" id="cursos">
+        <div class="container">
+            <div class="section-title">
+                <p class="futuristic-text" style="color: var(--secondary);">Nuestras Fichas</p>
+                <h2>Explora nuestros <span style="color: var(--primary);">Cursos</span></h2>
+            </div>
+
+            <div id="courses-container" class="courses-grid">
+                <!-- Los cursos se cargarán dinámicamente aquí por JS -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="logoaitech educacion.webp" alt="Curso" style="opacity: 0.5;">
+                    </div>
+                    <h3>Cargando cursos...</h3>
+                    <p>Conectando con la base de datos de AITech...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Inscripción -->
+    <div id="enrollment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h2 class="futuristic-text">Inscripción</h2>
+                <p id="selected-course-name" style="color: var(--primary); font-weight: bold;">Nombre del Curso</p>
+            </div>
+
+            <form id="enrollment-form">
+                <input type="hidden" name="course" id="course-input">
+
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" name="name" required placeholder="Ej. Juan Pérez">
+                </div>
+
+                <div class="form-group">
+                    <label>Correo Electrónico</label>
+                    <input type="email" name="email" required placeholder="juan@ejemplo.com">
+                </div>
+
+                <div class="form-group">
+                    <label>WhatsApp / Teléfono</label>
+                    <input type="tel" name="phone" required placeholder="+57 ...">
+                </div>
+
+                <div class="form-group">
+                    <label>Perfil</label>
+                    <select name="profile">
+                        <option value="educador">Educador / Docente</option>
+                        <option value="padre">Padre de Familia</option>
+                        <option value="estudiante">Estudiante</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">ENVIAR SOLICITUD Y PAGAR</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <img src="logoaitech educacion.webp" alt="Logo" style="height: 40px; margin-bottom: 20px; opacity: 0.7;">
+            <p>&copy; 2026 AITech Educación. Todos los derechos reservados.</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; color: #666;">Potenciado por Inteligencia Artificial</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
