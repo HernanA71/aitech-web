@@ -21,8 +21,9 @@
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#cursos">Cursos</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#" class="btn btn-primary" style="padding: 8px 20px;">Inscribirse</a></li>
+                <li><a href="https://aitech-educacion-website.vercel.app/" target="_blank">Nosotros</a></li>
+                <li><a href="#" class="btn btn-primary" style="padding: 8px 20px;"
+                        onclick="openEnrollment('General')">Inscribirse</a></li>
             </ul>
         </div>
     </nav>
@@ -37,8 +38,9 @@
                     educadores que inspiran a las nuevas generaciones.</p>
                 <div class="hero-btns">
                     <a href="#cursos" class="btn btn-primary">Ver Catálogo</a>
-                    <a href="#contacto" class="btn"
-                        style="color: white; border: 1px solid var(--glass-border); margin-left: 15px;">Saber Más</a>
+                    <button id="btn-saber-mas" class="btn"
+                        style="color: white; background: transparent; border: 1px solid var(--glass-border); margin-left: 15px; cursor: pointer;">Saber
+                        Más</button>
                 </div>
             </div>
             <div class="character-container">
@@ -111,7 +113,7 @@
                 <h2 class="futuristic-text">Inscripción</h2>
                 <p id="selected-course-name" style="color: var(--primary); font-weight: bold;">Nombre del Curso</p>
             </div>
-
+            <!-- ... resto del form ... -->
             <form id="enrollment-form">
                 <input type="hidden" name="course" id="course-input">
 
@@ -140,7 +142,6 @@
                     </select>
                 </div>
 
-                <!-- Información de Pago Nequi -->
                 <div
                     style="background: rgba(0, 210, 255, 0.1); border: 1px solid var(--primary); padding: 15px; border-radius: 15px; margin-bottom: 20px;">
                     <p style="font-size: 0.85rem; margin-bottom: 5px; color: var(--primary); font-weight: bold;">💳
@@ -153,6 +154,19 @@
 
                 <button type="submit" class="btn btn-primary" style="width: 100%;">ENVIAR INSCRIPCIÓN</button>
             </form>
+        </div>
+    </div>
+
+    <!-- Modal Tarjeta de Presentación -->
+    <div id="card-modal" class="modal">
+        <div class="modal-content" style="max-width: 500px; text-align: center;">
+            <span class="close-card-modal"
+                style="position: absolute; top: 20px; right: 20px; font-size: 2rem; color: white; cursor: pointer;">&times;</span>
+            <h2 class="futuristic-text" style="margin-bottom: 20px;">Mi Tarjeta</h2>
+            <img src="tarjeta presentacion frente.png" alt="Tarjeta Frente"
+                style="width: 100%; border-radius: 15px; margin-bottom: 20px; border: 1px solid var(--glass-border);">
+            <img src="tarjeta presentacion posterior.png" alt="Tarjeta Posterior"
+                style="width: 100%; border-radius: 15px; border: 1px solid var(--glass-border);">
         </div>
     </div>
 

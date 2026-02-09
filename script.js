@@ -13,6 +13,11 @@ const enrollmentForm = document.getElementById('enrollment-form');
 const selectedCourseName = document.getElementById('selected-course-name');
 const courseInput = document.getElementById('course-input');
 
+// Elementos de Tarjeta Modal
+const cardModal = document.getElementById('card-modal');
+const btnSaberMas = document.getElementById('btn-saber-mas');
+const closeCardModal = document.querySelector('.close-card-modal');
+
 async function loadDataFromSheets() {
     try {
         const response = await fetch(GOOGLE_SCRIPT_URL + '?t=' + new Date().getTime()); // Evitar cache
@@ -80,6 +85,26 @@ closeModal.onclick = () => {
     modal.style.display = 'none';
     document.body.style.overflow = 'auto';
 }
+
+// Lógica para Tarjeta Modal
+if (btnSaberMas) {
+    btnSaberMas.onclick = () => {
+        cardModal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    };
+}
+
+if (closeCardModal) {
+    closeCardModal.onclick = () => {
+        cardModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    };
+}
+
+window.onclick = (event) => {
+    if (event.target == modal) closeModal.onclick();
+    if (event.target == cardModal) closeCardModal.onclick();
+};
 
 enrollmentForm.onsubmit = async (e) => {
     e.preventDefault();
