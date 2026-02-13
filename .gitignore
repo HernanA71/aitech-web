@@ -1,0 +1,12 @@
+
+# Multimedia grande local (no subir)
+*.mp4
+*.mov
+*.avi
+Aitech2.png
+
+# Directorios de sistema/temp
+.DS_Store
+Thumbs.db
+node_modules/
+.vscode/
