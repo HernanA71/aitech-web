@@ -178,7 +178,51 @@
         </div>
     </footer>
 
+    <!-- AITech Bot Conversacional -->
+    <div id="chatbot-toggle" aria-label="Abrir chat con AIBot">
+        <img src="Logo de pie.png" alt="AIBot">
+        <div id="chatbot-badge">1</div>
+    </div>
+
+    <div id="chatbot-window">
+        <div class="chatbot-header">
+            <div class="chatbot-header-info">
+                <div class="chatbot-header-avatar">
+                    <img src="Logo de pie.png" alt="AIBot">
+                    <span class="chatbot-status-dot"></span>
+                </div>
+                <div>
+                    <h4>AIBot</h4>
+                    <span class="chatbot-status-text">En línea</span>
+                </div>
+            </div>
+            <button id="chatbot-close" aria-label="Cerrar chat">&times;</button>
+        </div>
+
+        <div id="chatbot-messages" class="chatbot-messages">
+            <!-- Los mensajes se generan dinámicamente -->
+        </div>
+
+        <div class="chatbot-quick-actions">
+            <button class="chatbot-quick-btn" data-action="cursos">🎓 Cursos</button>
+            <button class="chatbot-quick-btn" data-action="precios">💰 Precios</button>
+            <button class="chatbot-quick-btn" data-action="inscribirme">📝 Inscripción</button>
+            <button class="chatbot-quick-btn" data-action="contacto">📞 Contacto</button>
+        </div>
+
+        <div class="chatbot-input-area">
+            <input type="text" id="chatbot-input" placeholder="Escribe tu mensaje..." autocomplete="off">
+            <button id="chatbot-send" aria-label="Enviar mensaje">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 2L11 13"></path>
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script src="chatbot.js"></script>
 </body>
 
 </html>
